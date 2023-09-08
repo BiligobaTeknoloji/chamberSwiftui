@@ -7,6 +7,25 @@ struct DetailedChatView: View {
     @Environment(\.dismiss) var dismiss
     @State private var keyboardHeight: CGFloat = 0.0
     
+    @State private var messages: [Message] = [
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+        Message(text: "Hello!", isCurrentUser: false),
+        Message(text: "Hi there!", isCurrentUser: true),
+    ]
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -16,18 +35,21 @@ struct DetailedChatView: View {
                 
                 // Chat content
                 ScrollView {
-                    VStack(spacing: 20) {
-                        ForEach(0..<50) { index in
-                            Group {
-                                ChatBubble(isSender: false, message: "Hello! How are you?")
-                                ChatBubble(isSender: true, message: "I'm good, thanks!")
-                                ChatBubble(isSender: true, message: "anyu anya ankyk lsdkfj")
+                    ScrollViewReader{ ScrollView in
+                        LazyVStack {
+                            ForEach(messages) { message in
+                                ChatBubble(isSender: message.isCurrentUser, message: message.text)
+                                    .id(message.id)
                             }
-                            .padding(.horizontal)
+                        }
+                        .onChange(of: messages) { newValue in
+                            withAnimation {
+                                ScrollView.scrollTo(messages.last?.id, anchor: .bottom)
+                            }
                         }
                     }
                 }
-                .padding(.bottom,52)
+                .padding(.top, 80)
                 
                 VStack {
                     Spacer()
@@ -128,6 +150,7 @@ struct DetailedChatView: View {
     }
     
     private func sendMessage() {
+        messages.append(Message(text: messageText, isCurrentUser: true))
         messageText = ""
     }
 }

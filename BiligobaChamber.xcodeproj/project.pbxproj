@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14295C082AAB07EB0079E2FD /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14295C072AAB07EB0079E2FD /* MessageModel.swift */; };
 		143A1F412AA7611B003AEB35 /* StrokedTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A1F402AA7611B003AEB35 /* StrokedTextFieldStyle.swift */; };
 		143A1F432AA76547003AEB35 /* Learn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A1F422AA76547003AEB35 /* Learn.swift */; };
 		143A1F712AA8CE48003AEB35 /* Dd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 143A1F702AA8CE48003AEB35 /* Dd.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14295C072AAB07EB0079E2FD /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		143A1F402AA7611B003AEB35 /* StrokedTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokedTextFieldStyle.swift; sourceTree = "<group>"; };
 		143A1F422AA76547003AEB35 /* Learn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn.swift; sourceTree = "<group>"; };
 		143A1F702AA8CE48003AEB35 /* Dd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dd.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				14B36A5C2A9B58D500190EE9 /* Decoder.swift */,
 				14B36A5D2A9B58D500190EE9 /* CountryNumbers.json */,
 				14B36A5E2A9B58D500190EE9 /* CPDate.swift */,
+				14295C072AAB07EB0079E2FD /* MessageModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				14B36A4C2A9B58B500190EE9 /* PasswordField.swift in Sources */,
 				143A1F432AA76547003AEB35 /* Learn.swift in Sources */,
 				14B36A432A9B58B500190EE9 /* LoginView.swift in Sources */,
+				14295C082AAB07EB0079E2FD /* MessageModel.swift in Sources */,
 				14B36A562A9B58B500190EE9 /* MainIconAppBar.swift in Sources */,
 				14B36A172A9B586600190EE9 /* BiligobaChamberApp.swift in Sources */,
 				14B36A4E2A9B58B500190EE9 /* BackgroundColor.swift in Sources */,
